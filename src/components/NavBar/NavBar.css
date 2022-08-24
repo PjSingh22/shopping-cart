@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background-color: #282c34;
+  color: white;
+}
+
+.title {
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin-right: 10px;
+}
