@@ -6,7 +6,7 @@
   width: 100vw;
 }
 
-.home-header > p {
+.header {
   font-size: 2rem;
   font-weight: bold;
 }

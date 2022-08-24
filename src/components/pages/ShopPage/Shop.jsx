@@ -1,7 +1,15 @@
+
 const Shop = () => {
   return (
     <div>
-      <h1>Shop</h1>
+      <div>
+        <p className="shop-header header">Drip</p>
+      </div>
+      <div className="shop-items">
+        <div className="shop-item">
+
+        </div>
+      </div>
     </div>
   );
 }
