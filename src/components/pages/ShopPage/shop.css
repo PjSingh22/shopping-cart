@@ -12,8 +12,9 @@
   flex-direction: column;
   text-align: center;
 }
-.shop-item:not(:first-child) {
-  margin-top: 5px;
+
+.shop-item {
+  margin-bottom: 10px;
 }
 
 .item-img {
