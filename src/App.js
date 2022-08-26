@@ -13,7 +13,7 @@ import Shop from './components/pages/ShopPage/Shop';
 function App() {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
-  const [cartCount, setCartCount] = useState(cart.length);
+  const [cartCount, setCartCount] = useState(0);
 
   const checkCart = (itemInfo) => {
     const findDuplicate = cart.find(item => item.id === itemInfo.id);
@@ -36,10 +36,12 @@ function App() {
         quantity: 1
       }
       checkCart(itemInfo);
+      setCartCount(cartCount + 1);
     } else {
       return;
     }
   }
+  console.log(cart);
   return (
     <>
       <NavBar cartCount={cartCount} />

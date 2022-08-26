@@ -9,14 +9,14 @@ const Shop = ({ cart, addToCart }) => {
       <div className='title-container'>
         <p className="shop-header header">Drip</p>
       </div>
-      <div className="shop-items" onClick={addToCart}>
+      <div className="shop-items">
         <div className="shop-item">
           <span className='item-id' hidden>1</span>
           <img className='item-img' src={thor} alt="gladiator helmet" />
           <div className="info-actions">
             <p className='item-title'>Gladiator Helmet</p>
             <p className='item-price'>$1000</p>
-            <button className='shop-btn'>Add To Cart</button>
+            <button className='shop-btn' onClick={addToCart}>Add To Cart</button>
           </div>
         </div>
         <div className="shop-item">
@@ -25,7 +25,7 @@ const Shop = ({ cart, addToCart }) => {
           <div className='info-actions'>
             <p className='item-title'>Grandmaster Garments</p>
             <p className='item-price'>$6969</p>
-            <button className='shop-btn'>Add To Cart</button>
+            <button className='shop-btn' onClick={addToCart}>Add To Cart</button>
           </div>
         </div>
         <div className="shop-item">
@@ -34,7 +34,7 @@ const Shop = ({ cart, addToCart }) => {
           <div className='info-actions'>
             <p className='item-title'>Godess of Death Gear</p>
             <p className='item-price'>$9000</p>
-            <button className='shop-btn'>Add To Cart</button>
+            <button className='shop-btn' onClick={addToCart}>Add To Cart</button>
           </div>
         </div>
         <div className="shop-item">
@@ -43,7 +43,7 @@ const Shop = ({ cart, addToCart }) => {
           <div className='info-actions'>
             <p className='item-title'>God of Mischief outfit</p>
             <p className='item-price'>$5000</p>
-            <button className='shop-btn'>Add To Cart</button>
+            <button className='shop-btn' onClick={addToCart}>Add To Cart</button>
           </div>
         </div>
       </div>
