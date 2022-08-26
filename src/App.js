@@ -15,13 +15,38 @@ function App() {
   const [total, setTotal] = useState(0);
   const [cartCount, setCartCount] = useState(cart.length);
 
+  const checkCart = (itemInfo) => {
+    const findDuplicate = cart.find(item => item.id === itemInfo.id);
+      if(findDuplicate) {
+        findDuplicate.quantity += 1;
+      } else {
+        setCart([...cart, itemInfo]);
+      }
+  }
+
+  const addToCart = (e) => {
+    const item = e.target.parentElement.parentElement;
+    if (item.classList.contains('shop-item')) { 
+      const itemInfo = {
+        id: Number(item.querySelector('.item-id').innerText),
+        img: item.querySelector('.item-img').src,
+        name: item.querySelector('.item-title').textContent,
+        price: item.querySelector('.item-price').textContent,
+        quantity: 1
+      }
+      checkCart(itemInfo);
+    } else {
+      return;
+    }
+  }
+console.log(cart)
   return (
     <>
-      <NavBar />
+      <NavBar cartCount={cartCount} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop cart={cart} />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/shop" element={<Shop cart={cart} addToCart={addToCart} />} />
+        <Route path="/cart" element={<Cart cart={cart}/>} />
       </Routes>
     </>
   );

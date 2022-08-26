@@ -3,14 +3,15 @@ import grandmaster from '../../../images/grandmaster-drip.jpg';
 import hela from '../../../images/hela-outfit.webp';
 import loki from '../../../images/loki-garment.jpg';
 import './shop.css'
-const Shop = () => {
+const Shop = ({ cart, addToCart }) => {
   return (
     <div id='shop-container'>
       <div className='title-container'>
         <p className="shop-header header">Drip</p>
       </div>
-      <div className="shop-items">
-        <div className="shop-item" key={1}>
+      <div className="shop-items" onClick={addToCart}>
+        <div className="shop-item" itemID={1}>
+          <span className='item-id' hidden>1</span>
           <img className='item-img' src={thor} alt="gladiator helmet" />
           <div className="info-actions">
             <p className='item-title'>Gladiator Helmet</p>
@@ -18,7 +19,8 @@ const Shop = () => {
             <button className='shop-btn'>Add To Cart</button>
           </div>
         </div>
-        <div className="shop-item" key={2}>
+        <div className="shop-item" itemID={2}>
+          <span className='item-id' hidden>2</span>
           <img className='item-img' src={grandmaster} alt="gladiator helmet" />
           <div className='info-actions'>
             <p className='item-title'>Grandmaster Garments</p>
@@ -26,7 +28,8 @@ const Shop = () => {
             <button className='shop-btn'>Add To Cart</button>
           </div>
         </div>
-        <div className="shop-item" key={3}>
+        <div className="shop-item" itemID={3}>
+          <span className='item-id' hidden>3</span>
           <img className='item-img' src={hela} alt="gladiator helmet" />
           <div className='info-actions'>
             <p className='item-title'>Godess of Death Gear</p>
@@ -34,7 +37,8 @@ const Shop = () => {
             <button className='shop-btn'>Add To Cart</button>
           </div>
         </div>
-        <div className="shop-item" key={4}>
+        <div className="shop-item" itemID={4}>
+          <span className='item-id' hidden>4</span>
           <img className='item-img' src={loki} alt="gladiator helmet" />
           <div className='info-actions'>
             <p className='item-title'>God of Mischief outfit</p>
