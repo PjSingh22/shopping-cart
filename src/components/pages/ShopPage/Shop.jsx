@@ -10,7 +10,7 @@ const Shop = ({ cart, addToCart }) => {
         <p className="shop-header header">Drip</p>
       </div>
       <div className="shop-items" onClick={addToCart}>
-        <div className="shop-item" itemID={1}>
+        <div className="shop-item">
           <span className='item-id' hidden>1</span>
           <img className='item-img' src={thor} alt="gladiator helmet" />
           <div className="info-actions">
@@ -19,7 +19,7 @@ const Shop = ({ cart, addToCart }) => {
             <button className='shop-btn'>Add To Cart</button>
           </div>
         </div>
-        <div className="shop-item" itemID={2}>
+        <div className="shop-item">
           <span className='item-id' hidden>2</span>
           <img className='item-img' src={grandmaster} alt="gladiator helmet" />
           <div className='info-actions'>
@@ -28,7 +28,7 @@ const Shop = ({ cart, addToCart }) => {
             <button className='shop-btn'>Add To Cart</button>
           </div>
         </div>
-        <div className="shop-item" itemID={3}>
+        <div className="shop-item">
           <span className='item-id' hidden>3</span>
           <img className='item-img' src={hela} alt="gladiator helmet" />
           <div className='info-actions'>
@@ -37,7 +37,7 @@ const Shop = ({ cart, addToCart }) => {
             <button className='shop-btn'>Add To Cart</button>
           </div>
         </div>
-        <div className="shop-item" itemID={4}>
+        <div className="shop-item">
           <span className='item-id' hidden>4</span>
           <img className='item-img' src={loki} alt="gladiator helmet" />
           <div className='info-actions'>

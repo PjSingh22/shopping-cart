@@ -20,6 +20,7 @@ function App() {
       if(findDuplicate) {
         findDuplicate.quantity += 1;
       } else {
+        // add total and cart count when created delete method
         setCart([...cart, itemInfo]);
       }
   }
@@ -39,7 +40,6 @@ function App() {
       return;
     }
   }
-console.log(cart)
   return (
     <>
       <NavBar cartCount={cartCount} />
