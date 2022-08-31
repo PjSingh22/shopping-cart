@@ -1,3 +1,4 @@
+import CheckoutBar from '../../CheckoutBar/CheckoutBar';
 import './cart.css';
 
 const Cart = ({ cart, total, incrementAmount, decrementAmount, removeFromCart }) => {
@@ -32,10 +33,7 @@ const Cart = ({ cart, total, incrementAmount, decrementAmount, removeFromCart })
               </div>
             ))}
           </div>
-          <div className='checkout-container'>
-              <h2 className='total-price'>Total: {total}</h2>
-              <button className='checkout-btn'>Checkout</button>
-          </div>
+          <CheckoutBar total={total} />
         </>
       )}
     </div>

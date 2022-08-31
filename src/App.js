@@ -41,8 +41,6 @@ function App() {
       } else {
         // TODO: add total and cart count when created delete method
         setCart([...cart, itemInfo]);
-        setCartCount(cartCount + 1);
-        setTotal(total + Number(itemInfo.price.slice(1)));
       }
   }
 
@@ -57,6 +55,8 @@ function App() {
         quantity: 1
       }
       checkCart(itemInfo);
+      setCartCount(cartCount + 1);
+      setTotal(total + Number(itemInfo.price.slice(1)));
     } else {
       return;
     }
