@@ -15,13 +15,34 @@ function App() {
   const [total, setTotal] = useState(0);
   const [cartCount, setCartCount] = useState(0);
 
+  const incrementAmount = (item) => {
+    item.quantity += 1;
+    setCart([...cart]);
+    setCartCount(cartCount + 1);
+    setTotal(total + Number(item.price.slice(1)));
+  }
+
+  const decrementAmount = (item) => {
+    if (item.quantity > 1) {
+      item.quantity -= 1;
+      setCart([...cart]);
+      setCartCount(cartCount - 1);
+      setTotal(total - Number(item.price.slice(1)));
+    } else {
+      // TODO: remove item from cart
+      return;
+    }
+  }
+
   const checkCart = (itemInfo) => {
     const findDuplicate = cart.find(item => item.id === itemInfo.id);
       if(findDuplicate) {
         findDuplicate.quantity += 1;
       } else {
-        // add total and cart count when created delete method
+        // TODO: add total and cart count when created delete method
         setCart([...cart, itemInfo]);
+        setCartCount(cartCount + 1);
+        setTotal(total + Number(itemInfo.price.slice(1)));
       }
   }
 
@@ -36,19 +57,39 @@ function App() {
         quantity: 1
       }
       checkCart(itemInfo);
-      setCartCount(cartCount + 1);
     } else {
       return;
     }
   }
-  console.log(cart);
+
+  const removeFromCart = (item) => {
+    const newCart = cart.filter(cartItem => cartItem.id !== item.id);
+    setCart([...newCart]);
+    setCartCount(cartCount - item.quantity);
+    setTotal(total - (Number(item.price.slice(1)) * item.quantity));
+  }
   return (
     <>
       <NavBar cartCount={cartCount} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop cart={cart} addToCart={addToCart} />} />
-        <Route path="/cart" element={<Cart cart={cart}/>} />
+        <Route path="/shop" element={
+                                      <Shop 
+                                        cart={cart} 
+                                        addToCart={addToCart} 
+                                      />
+                                    }
+        />
+        <Route path="/cart" element={
+                                      <Cart 
+                                        cart={cart}
+                                        total={total}
+                                        incrementAmount={incrementAmount} 
+                                        decrementAmount={decrementAmount} 
+                                        removeFromCart={removeFromCart}
+                                      />
+                                    } 
+        />
       </Routes>
     </>
   );

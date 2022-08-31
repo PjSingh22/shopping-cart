@@ -3,6 +3,7 @@ import grandmaster from '../../../images/grandmaster-drip.jpg';
 import hela from '../../../images/hela-outfit.webp';
 import loki from '../../../images/loki-garment.jpg';
 import './shop.css'
+
 const Shop = ({ cart, addToCart }) => {
   return (
     <div id='shop-container'>
@@ -47,7 +48,6 @@ const Shop = ({ cart, addToCart }) => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }
