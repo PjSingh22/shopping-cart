@@ -8,6 +8,8 @@ const Cart = ({ cart, total, incrementAmount, decrementAmount, removeFromCart })
       <div className='title-container'>
         <p className="shop-header header">Cart</p>
       </div>
+      <div className='cart_checkout'>
+
       {cart.length === 0 ? (
         <p className='empty-cart-msg'>Cart is empty, cart is sad.</p>
       ) : (
@@ -36,6 +38,7 @@ const Cart = ({ cart, total, incrementAmount, decrementAmount, removeFromCart })
           <CheckoutBar total={total} />
         </>
       )}
+      </div>
     </div>
   );
 }

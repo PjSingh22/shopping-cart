@@ -1,0 +1,21 @@
+.checkout-btn:hover {
+  color: red
+}
+
+@media (min-width: 1279px) {
+  .checkout-container {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .checkout-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #282c34;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+}
