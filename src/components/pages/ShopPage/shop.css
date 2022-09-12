@@ -37,3 +37,22 @@
   margin: 0.5rem 0;
   font-weight: bold;
 }
+
+@media (min-width: 1279px) {
+  .item-img {
+    width: 20%;
+    /* height: 50%; */
+  }
+
+  .item-title {
+    font-size: 2rem;
+  }
+
+  .item-price {
+    font-size: 1.5rem;
+  }
+
+  .info-actions {
+    padding: 10px;
+  }
+}

@@ -61,3 +61,15 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+@media (min-width: 1279px) {
+  .amount-btn {
+    font-size: 1.5rem;
+  }
+  .total-items {
+    font-size: 1.5rem;
+  }
+  .checkout-btn {
+    font-size: 1.5rem;
+  }
+}

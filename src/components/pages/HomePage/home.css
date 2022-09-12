@@ -23,3 +23,14 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+@media (min-width: 1279px) {
+  .home-info {
+    font-size: 1.5rem;
+    width: 50%;
+  }
+
+  .shop-btn {
+    font-size: 1.5rem;
+  }
+}
