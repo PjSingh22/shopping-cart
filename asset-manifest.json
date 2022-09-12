@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.2216753f.css",
+    "main.js": "/shopping-cart/static/js/main.4f0db19f.js",
+    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/grandmaster-drip.jpg": "/shopping-cart/static/media/grandmaster-drip.491946765b6bb8817534.jpg",
+    "static/media/hela-outfit.webp": "/shopping-cart/static/media/hela-outfit.401eb8760d6a412bd9dd.webp",
+    "static/media/gladiator-helmet.jpg": "/shopping-cart/static/media/gladiator-helmet.dc6cce9288e72d79a805.jpg",
+    "static/media/loki-garment.jpg": "/shopping-cart/static/media/loki-garment.5b8163e7678cf448d8ae.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.2216753f.css.map": "/shopping-cart/static/css/main.2216753f.css.map",
+    "main.4f0db19f.js.map": "/shopping-cart/static/js/main.4f0db19f.js.map",
+    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2216753f.css",
+    "static/js/main.4f0db19f.js"
+  ]
+}
